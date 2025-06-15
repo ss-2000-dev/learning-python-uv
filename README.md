@@ -12,3 +12,7 @@ First Step (Show Hello World)
 - Add Pacakge : `uv add django`
 - create files
 - Run Server : `uv run python manage.py runserver`
+
+Start Create Todo App
+
+- show sample task

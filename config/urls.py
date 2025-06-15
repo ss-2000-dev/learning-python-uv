@@ -1,9 +1,7 @@
-from django.http import HttpResponse
-from django.urls import path
-
-def hello_view(request):
-    return HttpResponse("Hello World")
+from django.contrib import admin
+from django.urls import path, include
 
 urlpatterns = [
-    path("", hello_view),  # ルートにアクセスしたら Hello World を返す
+    path('admin/', admin.site.urls),
+    path('', include('todo.urls')),  # ← ここを追加
 ]
