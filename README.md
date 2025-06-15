@@ -1,5 +1,14 @@
-Python uv Learning
+## Learning Python uv Django
 
-2025/06/15
+#### 2025/06/15
 
-- setup uv
+setup uv
+
+- setup : `uv init learning-python-uv`
+- confirom uv setup : `uv run main.py`
+
+First Step (Show Hello World)
+
+- Add Pacakge : `uv add django`
+- create files
+- Run Server : `uv run python manage.py runserver`
