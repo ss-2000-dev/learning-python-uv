@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.utils.html import escape
 
 # Temporary Task
@@ -18,5 +18,6 @@ def todo_list(request):
                 'title': escape(title) # escape() prevents XSS attacks by escaping HTML characters
                 }
             TASKS.append(new_task)
+        return redirect('/')
 
     return render(request, 'todo/todo_list.html', {'tasks': TASKS})
