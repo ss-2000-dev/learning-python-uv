@@ -1,7 +1,5 @@
 from django.shortcuts import render
 
-from django.shortcuts import render
-
 # Temporary Task
 TASKS = [
     {'id': 1, 'title': 'Buy groceries'},
