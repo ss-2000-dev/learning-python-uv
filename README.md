@@ -16,3 +16,11 @@ First Step (Show Hello World)
 Start Create Todo App
 
 - show sample task
+
+#### 2025/06/16
+
+Add Item
+
+- Create Input Form
+- Add Item usgin POST method
+- Learning MVC, MTV

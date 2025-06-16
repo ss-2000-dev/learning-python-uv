@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.utils.html import escape
 
 # Temporary Task
 TASKS = [
@@ -8,4 +9,14 @@ TASKS = [
 ]
 
 def todo_list(request):
+    if request.method == "POST":
+        # strip() removes leading and trailing whitespace
+        title = request.POST.get("task", "").strip() 
+        if title:
+            new_task = {
+                'id': len(TASKS) + 1, 
+                'title': escape(title) # escape() prevents XSS attacks by escaping HTML characters
+                }
+            TASKS.append(new_task)
+
     return render(request, 'todo/todo_list.html', {'tasks': TASKS})
