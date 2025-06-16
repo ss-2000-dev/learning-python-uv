@@ -16,6 +16,14 @@
     <ul>
       {% for task in tasks %}
       <li>{{ task.title }}</li>
+      <form
+        method="post"
+        action="/delete/{{ forloop.counter0 }}/"
+        style="display: inline"
+      >
+        {% csrf_token %}
+        <button type="submit">削除</button>
+      </form>
       {% empty %}
       <li>No tasks yet.</li>
       {% endfor %}

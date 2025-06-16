@@ -8,6 +8,7 @@ TASKS = [
     {'id': 3, 'title': 'Study Django'},
 ]
 
+
 def todo_list(request):
     if request.method == "POST":
         # strip() removes leading and trailing whitespace
@@ -18,6 +19,13 @@ def todo_list(request):
                 'title': escape(title) # escape() prevents XSS attacks by escaping HTML characters
                 }
             TASKS.append(new_task)
-        return redirect('/')
+        return redirect('/') # POST/Redirect pattern to avoid resubmission
 
     return render(request, 'todo/todo_list.html', {'tasks': TASKS})
+
+
+def delete_task(request, task_id):
+    if request.method == 'POST':
+        if 0 <= task_id < len(TASKS):
+            del TASKS[task_id]
+    return redirect('todo_list')
