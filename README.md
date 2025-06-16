@@ -24,4 +24,7 @@ Add Item
 - Create Input Form
 - Add Item usgin POST method
 
+Delete Item
+Edit Item
+
 Learning MVC, MTV

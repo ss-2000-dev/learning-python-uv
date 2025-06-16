@@ -29,3 +29,17 @@ def delete_task(request, task_id):
         if 0 <= task_id < len(TASKS):
             del TASKS[task_id]
     return redirect('todo_list')
+
+
+def edit_task(request, task_id):
+    if not (0 <= task_id < len(TASKS)):
+        return redirect("todo_list")
+    
+    if request.method == "POST":
+        new_title = request.POST.get("title")
+        if new_title:
+            TASKS[task_id]["title"] = new_title
+        return redirect("todo_list")
+    
+    task = TASKS[task_id]
+    return render(request, "todo/edit_task.html", {"task": task, "task_id": task_id})
