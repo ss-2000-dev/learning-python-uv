@@ -32,4 +32,7 @@ Learning MVC, MTV
 #### 2025/06/17
 
 Dockerize Todo app
-Learning uv sync command
+
+- `docker build -t uv-django-todo .`
+- `docker run --name uv-django-todo-container -p 8080:8080 uv-django-todo`
+  Learning uv sync command
