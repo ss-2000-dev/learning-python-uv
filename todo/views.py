@@ -3,7 +3,7 @@ from django.utils.html import escape
 
 # Temporary Task
 TASKS = [
-    {'id': 1, 'title': 'Buy groceries'},
+    {'id': 1, 'title': 'Buy apples'},
     {'id': 2, 'title': 'Walk the dog'},
     {'id': 3, 'title': 'Study Django'},
 ]
