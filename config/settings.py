@@ -50,3 +50,17 @@ TEMPLATES = [
         },
     },
 ]
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.environ.get('MYSQL_DATABASE', 'mydjangoapp'),
+        'USER': os.environ.get('MYSQL_USER', 'mydjangoappuser'),
+        'PASSWORD': os.environ.get('MYSQL_PASSWORD', 'your_super_strong_app_password'),
+        'HOST': os.environ.get('MYSQL_HOST', 'db'), 
+        'PORT': int(os.environ.get('MYSQL_PORT', '3306')),
+        'OPTIONS': {
+            'charset': 'utf8mb4', 
+        },
+    }
+}
