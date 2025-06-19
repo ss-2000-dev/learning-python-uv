@@ -65,3 +65,7 @@ uv-django-todo-containner  |   Applying auth.0012_alter_user_first_name_max_leng
 uv-django-todo-containner  |   Applying sessions.0001_initial... OK
 uv-django-todo-containner exited with code 0
 ```
+
+#### 2025/06/19
+
+- Learning Docker Command
