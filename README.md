@@ -33,12 +33,12 @@
 - Learning uv sync command
 - Implement Docker Compose watch for hot reloading
   - `docker compose watch`
--
 
-### 2025/06/18
+#### 2025/06/18
 
 - Add MySQL Service
 - Test Migration(log)
+  - add command (`/app/.venv/bin/python manage.py migrate`)in compose.yaml
 - Learn compose commad → not yet maybe tommorow
 
 ```
