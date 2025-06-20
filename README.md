@@ -82,3 +82,5 @@ uv-django-todo-containner  |   todo/migrations/0001_initial.py
 uv-django-todo-containner  |     + Create model Task
 uv-django-todo-containner exited with code 0
 ```
+
+- What mean "Migration" → 　 Not yet
