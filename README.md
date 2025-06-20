@@ -74,6 +74,7 @@ uv-django-todo-containner exited with code 0
 
 - Define Task Model and Migration
   - `/app/.venv/bin/python manage.py makemigrations todo `
+  - `/app/.venv/bin/python manage.py migrate`
 
 ```
 uv-django-todo-containner  | Migrations for 'todo':
