@@ -9,6 +9,7 @@ services:
       - "8080:8080"
     environment:
       - PYTHONUNBUFFERED=1 # Prevents Python from buffering output, displaying logs in real-time
+    command: /app/.venv/bin/python manage.py makemigrations todo # Temorarily run migrations on container start
     # Docker Compose development watch
     develop:
       watch:

@@ -69,3 +69,15 @@ uv-django-todo-containner exited with code 0
 #### 2025/06/19
 
 - Learning Docker Command
+
+#### 2025/06/20 night
+
+- Define Task Model and Migration
+  - `/app/.venv/bin/python manage.py makemigrations todo `
+
+```
+uv-django-todo-containner  | Migrations for 'todo':
+uv-django-todo-containner  |   todo/migrations/0001_initial.py
+uv-django-todo-containner  |     + Create model Task
+uv-django-todo-containner exited with code 0
+```
