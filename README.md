@@ -83,4 +83,8 @@ uv-django-todo-containner  |     + Create model Task
 uv-django-todo-containner exited with code 0
 ```
 
-- What mean "Migration" → 　 Not yet
+- What mean "Migration"
+
+#### 2025/06/22
+
+- Learning words related to Database
