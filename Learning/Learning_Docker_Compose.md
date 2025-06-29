@@ -18,3 +18,8 @@ https://docs.docker.com/reference/cli/docker/system/prune/
 https://docs.docker.com/reference/cli/docker/compose/down/
 
 https://docs.docker.com/reference/cli/docker/
+
+### マイグレーションについて
+
+watch モードだとコンテナ → ホスト側へのファイル作成が反映されないのでマイグレーションコマンドを打ってもファイルが作成されない
+バインドマウントをするしかなかった

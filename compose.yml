@@ -4,32 +4,20 @@ services:
       context: .
       dockerfile: Dockerfile
     image: uv-django-todo:latest
-    container_name: uv-django-todo-containner
+    container_name: uv-django-todo-container
     ports:
       - "8080:8080"
-    environment:
-      - PYTHONUNBUFFERED=1 # Prevents Python from buffering output, displaying logs in real-time
     command: /app/.venv/bin/python manage.py migrate
-    # Docker Compose development watch
-    develop:
-      watch:
-        - action: sync
-          path: . # Watches the current host directory
-          target: /app # Syncs to the /app directory inside the container
-          ignore:
-            - .venv/
-            - __pycache__/
-            - Learning/
-            - .git/
-            - "uv.lock"
-            - "pyproject.toml"
-
-        - action: rebuild
-          path: pyproject.toml
-
-        - action: rebuild
-          path: uv.lock
-
+    volumes:
+      - .:/app
+      - /app/.venv
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_HOST: db
+      MYSQL_PORT: 3306
     depends_on:
       - db
 

@@ -88,3 +88,10 @@ uv-django-todo-containner exited with code 0
 #### 2025/06/22
 
 - Learning words related to Database
+
+#### 2025/06/29
+
+- Stop Docker Compose Watch for make makegration file
+- Actual Makegration (add following command compose.yml)  
+  `/app/.venv/bin/python manage.py makemigrations`  
+  `/app/.venv/bin/python manage.py migrate`
